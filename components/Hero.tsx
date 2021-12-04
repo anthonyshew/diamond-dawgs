@@ -1,31 +1,127 @@
+import styled from "styled-components"
+
 const Hero = () => {
 	return (
-		<section className="bg-green-900 pt-64 text-white">
-			<p className="text-center text-4xl font-bold tracking-widest uppercase">Welcome to the</p>
-			<h1 className="text-center text-7xl font-bold tracking-widest uppercase">Diamond Dawgs</h1>
-			<hr className="my-8 h-4 border-0 bg-yellow-500" />
-			<p className="mx-auto max-w-lg">
+		<Section>
+			<PreH1>Welcome to the</PreH1>
+			<H1>Diamond Dawgs</H1>
+			<Hr />
+			<Paragraph>
 				The DiamondDawgs Collection consists of 7,000 generative baseball characters, hand designed and drawn by
 				professional baseball player Evan Mendoza of the St. Louis Cardinals organization. This is more than just
 				baseball characters, this is the evolution we are about to witness on how athletes are able to express
 				themselves off the playing field. By joining us, you're not investing into some random project, you're helping
 				build this positive movement.
-			</p>
-			<div className="relative left-[5rem] flex flex-row justify-between">
-				<div className="flex flex-col justify-center items-center">
-					<p className="font-bold text-xl mb-4">PRICE: 0.03 ETH</p>
-					<button className="bg-gradient-to-r from-blue-400 to-blue-200 rounded-full px-12 py-2 text-xl font-medium tracking-widest">
-						CONNECT WALLET
-					</button>
-				</div>
-				<p className="text-green-600 text-[20rem] font-extrabold">330</p>
-			</div>
-			<div className="flex flex-col justify-center items-center text-center text-yellow-500 font-bold">
-				<h2 className="text-xl">RELEASE DATE</h2>
-				<p className="text-3xl">TBD</p>
-			</div>
-		</section>
+			</Paragraph>
+			<NumbersContainer>
+				<ButtonContainer>
+					<Price>PRICE: 0.03 ETH</Price>
+					<ConnectWallet>CONNECT WALLET</ConnectWallet>
+				</ButtonContainer>
+				<LargeNumber>330</LargeNumber>
+			</NumbersContainer>
+			<ReleaseWrapper className="flex flex-col justify-center items-center text-center text-yellow-500 font-bold">
+				<H2>RELEASE DATE</H2>
+				<TBD>TBD</TBD>
+			</ReleaseWrapper>
+		</Section>
 	)
 }
 
 export default Hero
+
+const Section = styled.section`
+	background: ${(props) => props.theme.colors.darkGreen};
+	padding-top: 16rem;
+	color: ${(props) => props.theme.colors.white};
+`
+
+const PreH1 = styled.div`
+	text-align: center;
+	font-size: 2.25rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+`
+
+const H1 = styled.h1`
+	text-align: center;
+	font-size: 4.5rem;
+	font-weight: 700;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+`
+
+const Hr = styled.hr`
+	margin: 2rem 0;
+	height: 1rem;
+	border: none;
+	background: ${(props) => props.theme.colors.yellow};
+`
+
+const Paragraph = styled.p`
+	margin: 0 auto;
+	max-width: 32rem;
+`
+
+const NumbersContainer = styled.div`
+	position: relative;
+	left: 5rem;
+	display: flex;
+	justify-content: space-between;
+`
+
+const ButtonContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+`
+
+const Price = styled.div`
+	font-weight: 700;
+	font-size: 1.25rem;
+`
+
+const ConnectWallet = styled.button`
+	background-image: linear-gradient(
+		to right,
+		${(props) => props.theme.colors.darkBlue} 50%,
+		${(props) => props.theme.colors.lightBlue} 100%
+	);
+	border-radius: 9999px;
+	padding: 0.5rem 3rem;
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	border: none;
+	color: ${(props) => props.theme.colors.white};
+	letter-spacing: 0.2rem;
+	font-weight: 600;
+`
+
+const LargeNumber = styled.p`
+	color: ${(props) => props.theme.colors.lightGreen};
+	font-size: 20rem;
+	font-weight: 800;
+`
+
+const ReleaseWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: ${(props) => props.theme.colors.yellow};
+	font-weight: 600;
+`
+
+const H2 = styled.h2`
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+`
+
+const TBD = styled.p`
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+`

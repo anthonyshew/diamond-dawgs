@@ -1,4 +1,5 @@
 import { NavLink } from "@Components/NavLink"
+import styled from "styled-components"
 
 const navLinks = [
 	{
@@ -17,15 +18,32 @@ const navLinks = [
 
 const Navbar = () => {
 	return (
-		<nav className="flex flex-row justify-between px-24 py-4">
-			<img src="/images/facade_black.PNG" className="w-24" />
-			<div className="flex flex-row items-center">
+		<Nav>
+			<Img src="/images/facade_black.PNG" />
+			<LinksWrapper>
 				{navLinks.map((link) => {
 					return <NavLink {...link} />
 				})}
-			</div>
-		</nav>
+			</LinksWrapper>
+		</Nav>
 	)
 }
 
 export default Navbar
+
+const Nav = styled.nav`
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 1rem 6rem;
+`
+
+const Img = styled.img`
+	width: 6rem;
+`
+
+const LinksWrapper = styled.div`
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+`
