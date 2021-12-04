@@ -5,6 +5,7 @@ import AnotherHero from "@Components/AnotherHero"
 import CardGrid from "@Components/CardGrid"
 import About from "@Components/About"
 import CoachingStaff from "@Components/CoachingStaff"
+import JoinTheTeam from "@Components/JoinTheTeam"
 
 const Home = () => {
 	return (
@@ -16,6 +17,7 @@ const Home = () => {
 			<CardGrid />
 			<About />
 			<CoachingStaff />
+			<JoinTheTeam />
 		</main>
 	)
 }

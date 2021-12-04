@@ -5,7 +5,7 @@ const teamMembers = [
 	{
 		name: "Matt",
 		role: "Developer",
-		image: "/images/dawg_3.PNG"
+		image: "/images/dawg_4.PNG"
 	},
 	{
 		name: "Flow",
