@@ -3,6 +3,7 @@ import GlobalStyles from "../styles/global"
 
 const colors = {
 	yellow: "#F5F64A",
+	gold: "#e7bc30",
 	darkGreen: "#243E36",
 	pink: "#FFDDD1",
 	lightGreen: "#81B29A",
