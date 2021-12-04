@@ -1,4 +1,28 @@
 import styled from "styled-components"
+import TeamMemberAvatar from "@Components/TeamMemberAvatar"
+
+const teamMembers = [
+	{
+		name: "Matt",
+		role: "Developer",
+		image: "/images/dawg_3.PNG"
+	},
+	{
+		name: "Flow",
+		role: "Strategy",
+		image: "/images/dawg_3.PNG"
+	},
+	{
+		name: "Ohio",
+		role: "Social Media",
+		image: "/images/dawg_2.PNG"
+	},
+	{
+		name: "Daedalus",
+		role: "Discord Manager",
+		image: "/images/dawg_1.PNG"
+	}
+]
 
 const CoachingStaff = ({ ...props }) => {
 	return (
@@ -24,6 +48,11 @@ const CoachingStaff = ({ ...props }) => {
 				feeling worthy, I also felt the power to translate the message of being more than an athlete in the NFT space.
 				This is my WHY!
 			</Bio>
+			<TeamGrid>
+				{teamMembers.map((member) => {
+					return <TeamMemberAvatar name={member.name} role={member.role} image={member.image} />
+				})}
+			</TeamGrid>
 		</Container>
 	)
 }
@@ -94,4 +123,10 @@ const Bio = styled.p`
 	font-weight: 600;
 	font-size: 1.1rem;
 	letter-spacing: 0.05rem;
+`
+
+const TeamGrid = styled.div`
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 5rem 1rem;
 `
