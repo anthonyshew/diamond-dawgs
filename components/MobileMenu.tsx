@@ -1,5 +1,4 @@
 import Hamburger from "@Components/Hamburger"
-import { useLockBodyScroll } from "hooks/useLockBodyScroll"
 import { Dispatch, SetStateAction } from "react"
 import styled, { useTheme } from "styled-components"
 import { navLinks } from "./Navbar"
@@ -11,7 +10,6 @@ interface Props {
 }
 
 const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
-	useLockBodyScroll(isMenuOpen)
 	const theme = useTheme()
 
 	return (

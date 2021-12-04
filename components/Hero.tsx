@@ -23,7 +23,7 @@ const Hero = () => {
 						<span>PRICE:</span>
 						<span> 0.03 ETH</span>
 					</Price>
-					<ConnectWallet onClick={() => console.log("Web magic!")}>CONNECT WALLET</ConnectWallet>
+					<ConnectWallet onClick={() => console.log("Matt's Web magic!")}>CONNECT WALLET</ConnectWallet>
 				</ButtonContainer>
 				<LargeNumber>330</LargeNumber>
 			</NumbersContainer>
