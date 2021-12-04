@@ -4,7 +4,7 @@ const About = ({ ...props }) => {
 	return (
 		<section>
 			<Container>
-				<H2>About</H2>
+				<H2 id="about">About</H2>
 			</Container>
 			<ContentContainer>
 				<p>

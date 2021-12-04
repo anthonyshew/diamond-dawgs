@@ -1,5 +1,8 @@
+import { Dispatch, SetStateAction } from "react"
 import { NavLink } from "@Components/NavLink"
 import styled from "styled-components"
+import Hamburger from "./Hamburger"
+import { useMobile } from "hooks/isMobile"
 
 const navLinks = [
 	{
@@ -16,15 +19,31 @@ const navLinks = [
 	}
 ]
 
-const Navbar = () => {
+interface Props {
+	setIsMenuOpen: Dispatch<SetStateAction<boolean>>
+}
+
+const Navbar = ({ setIsMenuOpen }: Props) => {
+	const isMobile = useMobile()
+
 	return (
 		<Nav>
-			<Img src="/images/facade_black.PNG" />
-			<LinksWrapper>
-				{navLinks.map((link) => {
-					return <NavLink {...link} />
-				})}
-			</LinksWrapper>
+			<a href="#">
+				<Img src="/images/facade_black.PNG" />
+			</a>
+			{isMobile ? (
+				<Hamburger
+					width="50px"
+					style={{ position: "relative", transform: "translateY(50%)", cursor: "pointer" }}
+					onClick={() => setIsMenuOpen(true)}
+				/>
+			) : (
+				<LinksWrapper>
+					{navLinks.map((link) => {
+						return <NavLink {...link} />
+					})}
+				</LinksWrapper>
+			)}
 		</Nav>
 	)
 }
@@ -35,7 +54,7 @@ const Nav = styled.nav`
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding: 1rem 6rem;
+	padding: 1rem 15%;
 `
 
 const Img = styled.img`
@@ -46,4 +65,5 @@ const LinksWrapper = styled.div`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	margin-left: 2rem;
 `

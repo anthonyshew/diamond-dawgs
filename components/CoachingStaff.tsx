@@ -27,7 +27,7 @@ const teamMembers = [
 const CoachingStaff = ({ ...props }) => {
 	return (
 		<Container>
-			<Pretitle>meet the</Pretitle>
+			<Pretitle id="team">meet the</Pretitle>
 			<Title>Coaching Staff</Title>
 			<Img src="/images/doza.PNG" />
 			<FlexRow>

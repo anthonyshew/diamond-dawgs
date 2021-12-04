@@ -6,16 +6,21 @@ const Hero = () => {
 			<PreH1>Welcome to the</PreH1>
 			<H1>Diamond Dawgs</H1>
 			<Hr />
-			<Paragraph>
-				The DiamondDawgs Collection consists of 7,000 generative baseball characters, hand designed and drawn by
-				professional baseball player Evan Mendoza of the St. Louis Cardinals organization. This is more than just
-				baseball characters, this is the evolution we are about to witness on how athletes are able to express
-				themselves off the playing field. By joining us, you're not investing into some random project, you're helping
-				build this positive movement.
-			</Paragraph>
+			<ParagraphWrapper>
+				<Paragraph>
+					The DiamondDawgs Collection consists of 7,000 generative baseball characters, hand designed and drawn by
+					professional baseball player Evan Mendoza of the St. Louis Cardinals organization. This is more than just
+					baseball characters, this is the evolution we are about to witness on how athletes are able to express
+					themselves off the playing field. By joining us, you're not investing into some random project, you're helping
+					build this positive movement.
+				</Paragraph>
+			</ParagraphWrapper>
 			<NumbersContainer>
 				<ButtonContainer>
-					<Price>PRICE: 0.03 ETH</Price>
+					<Price>
+						<span>PRICE:</span>
+						<span> 0.03 ETH</span>
+					</Price>
 					<ConnectWallet>CONNECT WALLET</ConnectWallet>
 				</ButtonContainer>
 				<LargeNumber>330</LargeNumber>
@@ -59,9 +64,13 @@ const Hr = styled.hr`
 	background: ${(props) => props.theme.colors.yellow};
 `
 
+const ParagraphWrapper = styled.div`
+	padding: 0 3rem;
+`
+
 const Paragraph = styled.p`
 	margin: 0 auto;
-	max-width: 32rem;
+	max-width: 90rem;
 	font-weight: 600;
 	font-size: 1.25rem;
 	letter-spacing: 0.1rem;
@@ -70,9 +79,10 @@ const Paragraph = styled.p`
 
 const NumbersContainer = styled.div`
 	position: relative;
-	left: 5rem;
+	z-index: 1;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
+	margin-top: 2rem;
 `
 
 const ButtonContainer = styled.div`
@@ -80,11 +90,26 @@ const ButtonContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	z-index: 10;
+
+	@media (max-width: 1000px) {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 `
 
 const Price = styled.div`
 	font-weight: 700;
-	font-size: 1.25rem;
+	font-size: 2rem;
+
+	@media (max-width: 1000px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 `
 
 const ConnectWallet = styled.button`
@@ -111,6 +136,10 @@ const LargeNumber = styled.p`
 	color: ${(props) => props.theme.colors.lightGreen};
 	font-size: 20rem;
 	font-weight: 800;
+
+	@media (max-width: 650px) {
+		font-size: 10rem;
+	}
 `
 
 const ReleaseWrapper = styled.div`
@@ -120,6 +149,7 @@ const ReleaseWrapper = styled.div`
 	justify-content: center;
 	color: ${(props) => props.theme.colors.yellow};
 	font-weight: 600;
+	margin-top: 2rem;
 `
 
 const H2 = styled.h2`

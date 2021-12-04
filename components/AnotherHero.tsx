@@ -3,7 +3,7 @@ import styled from "styled-components"
 const AnotherHero = () => {
 	return (
 		<Container>
-			<H2>Swing it dawg!</H2>
+			<H2 id="goals">Swing it dawg!</H2>
 			<P>
 				Standard projects that solely have a roadmap isn't what we are going for here. Our community is built on a
 				vision and a movement. We have big dreams and will continue to innovate our unique utilities, amazing artwork,
