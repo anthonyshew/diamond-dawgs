@@ -9,10 +9,12 @@ const Hero = () => {
 			<ParagraphWrapper>
 				<Paragraph>
 					The DiamondDawgs Collection consists of 7,000 generative baseball characters, hand designed and drawn by
-					professional baseball player Evan Mendoza of the St. Louis Cardinals organization. This is more than just
-					baseball characters, this is the evolution we are about to witness on how athletes are able to express
-					themselves off the playing field. By joining us, you're not investing into some random project, you're helping
-					build this positive movement.
+					professional baseball player Evan Mendoza of the St. Louis Cardinals organization.
+				</Paragraph>
+				<Paragraph>
+					This is more than just baseball characters, this is the evolution we are about to witness on how athletes are
+					able to express themselves off the playing field. By joining us, you're not investing into some random
+					project, you're helping build this positive movement.
 				</Paragraph>
 			</ParagraphWrapper>
 			<NumbersContainer>
@@ -21,7 +23,7 @@ const Hero = () => {
 						<span>PRICE:</span>
 						<span> 0.03 ETH</span>
 					</Price>
-					<ConnectWallet>CONNECT WALLET</ConnectWallet>
+					<ConnectWallet onClick={() => console.log("Web magic!")}>CONNECT WALLET</ConnectWallet>
 				</ButtonContainer>
 				<LargeNumber>330</LargeNumber>
 			</NumbersContainer>
@@ -47,6 +49,10 @@ const PreH1 = styled.div`
 	font-weight: 700;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
+
+	@media (max-width: 600px) {
+		font-size: 1.35rem;
+	}
 `
 
 const H1 = styled.h1`
@@ -55,6 +61,10 @@ const H1 = styled.h1`
 	font-weight: 700;
 	letter-spacing: 0.1rem;
 	text-transform: uppercase;
+
+	@media (max-width: 600px) {
+		font-size: 3.25rem;
+	}
 `
 
 const Hr = styled.hr`
@@ -66,15 +76,24 @@ const Hr = styled.hr`
 
 const ParagraphWrapper = styled.div`
 	padding: 0 3rem;
+
+	@media (max-width: 600px) {
+		padding: 0 1rem;
+	}
 `
 
 const Paragraph = styled.p`
-	margin: 0 auto;
+	margin: 2rem auto;
 	max-width: 90rem;
 	font-weight: 600;
 	font-size: 1.25rem;
 	letter-spacing: 0.1rem;
 	line-height: 2rem;
+
+	@media (max-width: 600px) {
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
 `
 
 const NumbersContainer = styled.div`
@@ -113,11 +132,7 @@ const Price = styled.div`
 `
 
 const ConnectWallet = styled.button`
-	background-image: linear-gradient(
-		to right,
-		${(props) => props.theme.colors.darkBlue} 50%,
-		${(props) => props.theme.colors.lightBlue} 100%
-	);
+	background-color: ${(props) => props.theme.colors.darkBlue};
 	border-radius: 9999px;
 	padding: 0.5rem 3rem;
 	font-size: 1.25rem;

@@ -21,7 +21,7 @@ const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
 					onClick={() => setIsMenuOpen(false)}
 					color={theme.colors.white}
 					width="100px"
-					style={{ position: "absolute", top: "24px", right: "24px" }}
+					style={{ position: "absolute", top: "24px", right: "24px", cursor: "pointer" }}
 				/>
 				<LinksWrapper>
 					{navLinks.map((link) => {

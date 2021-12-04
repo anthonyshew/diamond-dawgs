@@ -24,29 +24,33 @@ const teamMembers = [
 	}
 ]
 
-const CoachingStaff = ({ ...props }) => {
+const CoachingStaff = () => {
 	return (
 		<Container>
 			<Pretitle id="team">meet the</Pretitle>
 			<Title>Coaching Staff</Title>
-			<Img src="/images/doza.PNG" />
-			<FlexRow>
-				<H3>Evan Mendoza</H3>
-				<SocialIcons>
-					<a href="https://www.instagram.com/e_mendoza18/?hl=en" target="_blank" rel="noopener noreferrer">
-						<Social src="/images/instagram.PNG" />
-					</a>
-					<a href="https://twitter.com/e_mendoza18" target="_blank" rel="noopener noreferrer">
-						<Social src="/images/twitter.PNG" />
-					</a>
-				</SocialIcons>
-			</FlexRow>
-			<Info>Artist/Athlete, Creator of the DiamondDawgs</Info>
+			<MaxWidth>
+				<Img src="/images/doza.PNG" />
+				<Flex>
+					<H3>Evan Mendoza</H3>
+					<SocialIcons>
+						<a href="https://www.instagram.com/e_mendoza18/?hl=en" target="_blank" rel="noopener noreferrer">
+							<Social src="/images/instagram.PNG" />
+						</a>
+						<a href="https://twitter.com/e_mendoza18" target="_blank" rel="noopener noreferrer">
+							<Social src="/images/twitter.PNG" />
+						</a>
+					</SocialIcons>
+				</Flex>
+				<Info>Artist/Athlete, Creator of the DiamondDawgs</Info>
+			</MaxWidth>
 			<Bio>
 				I grew up not knowing how creative I really was. Having a desire to learn 3D softwares by myself in high school
-				should have been a tell. It wasn't until my first 1/1 sold back in March of 2021 I felt my worth. Along with
-				feeling worthy, I also felt the power to translate the message of being more than an athlete in the NFT space.
-				This is my WHY!
+				should have been a tell. It wasn't until my first 1/1 sold back in March of 2021 I felt my worth.
+			</Bio>
+			<Bio>
+				Along with feeling worthy, I also felt the power to translate the message of being more than an athlete in the
+				NFT space. This is my WHY!
 			</Bio>
 			<TeamGrid>
 				{teamMembers.map((member) => {
@@ -60,7 +64,7 @@ const CoachingStaff = ({ ...props }) => {
 export default CoachingStaff
 
 const Container = styled.div`
-	padding: 4rem;
+	padding: 4rem 2rem;
 `
 
 const Pretitle = styled.p`
@@ -76,19 +80,37 @@ const Title = styled.h2`
 	text-transform: uppercase;
 	font-weight: 900;
 	font-size: 4rem;
+
+	@media (max-width: 600px) {
+		font-size: 2.8rem;
+	}
+`
+
+const MaxWidth = styled.div`
+	max-width: 1200px;
+	margin: 0 auto;
 `
 
 const Img = styled.img`
+	display: block;
 	width: 40%;
 	max-width: 450px;
 	min-width: 250px;
+
+	@media (max-width: 800px) {
+		margin: 0 auto;
+	}
 `
 
-const FlexRow = styled.div`
+const Flex = styled.div`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
+
+	@media (max-width: 800px) {
+		flex-direction: column;
+	}
 `
 
 const H3 = styled.h3`
@@ -98,6 +120,10 @@ const H3 = styled.h3`
 	text-align: center;
 	font-weight: 900;
 	font-size: 2rem;
+
+	@media (max-width: 800px) {
+		margin: 1.5rem 0;
+	}
 `
 
 const SocialIcons = styled.div`
@@ -115,6 +141,11 @@ const Info = styled.div`
 	font-weight: 700;
 	font-size: 1.2rem;
 	text-transform: uppercase;
+
+	@media (max-width: 800px) {
+		margin: 1.5rem 0;
+		text-align: center;
+	}
 `
 
 const Bio = styled.p`
@@ -129,4 +160,8 @@ const TeamGrid = styled.div`
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 5rem 1rem;
+
+	@media (max-width: 800px) {
+		grid-template-columns: repeat(1, 1fr);
+	}
 `

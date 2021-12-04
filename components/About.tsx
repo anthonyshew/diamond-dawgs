@@ -10,10 +10,14 @@ const About = ({ ...props }) => {
 				<p>
 					The Diamond Dawg NFTs are 7,000 computer generated, baseball inspired collectibles with over 175 hand crafted
 					features by pro athlete and artist, Evan Mendoza. Each collectible contains unique traits inspired by his
-					teammates, cities, teams, and his journey from Little League to the Pros. Aside from the Dawgs, Evan has had a
-					creative background most of his life. He enjoys photography (sports & timelapse), videography, storytellings,
-					and much more. We are bringing together baseball fans and NFT collectors through the art of an actual player.
-					This is your opportunity to get involved in this one-of-a-kind project and community!
+					teammates, cities, teams, and his journey from Little League to the Pros.
+				</p>
+
+				<p>
+					Aside from the Dawgs, Evan has had a creative background most of his life. He enjoys photography (sports &
+					timelapse), videography, storytellings, and much more. We are bringing together baseball fans and NFT
+					collectors through the art of an actual player. This is your opportunity to get involved in this one-of-a-kind
+					project and community!
 				</p>
 			</ContentContainer>
 		</section>
@@ -39,18 +43,27 @@ const H2 = styled.h2`
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 1rem;
+
+	@media (max-width: 650px) {
+		font-size: 3rem;
+	}
 `
 
 const ContentContainer = styled.div`
-	padding: 3rem;
+	padding: 1rem;
 	background-color: ${(props) => props.theme.colors.lightGreen};
 	letter-spacing: 0.05rem;
 
 	p {
-		margin: 0 auto;
+		margin: 2.5rem auto;
 		max-width: 750px;
 		font-weight: 600;
 		line-height: 2.5rem;
 		font-size: 1.5rem;
+
+		@media (max-width: 600px) {
+			font-size: 1rem;
+			line-height: 1.5rem;
+		}
 	}
 `

@@ -8,7 +8,7 @@ const JoinTheTeam = ({ ...props }) => {
 				<Outbound href="https://mobile.twitter.com/diamonddawgsnft" target="_blank" rel="noopener noreferrer">
 					<Img src="/images/twitter.PNG" />
 				</Outbound>
-				<Outbound href="#" target="_blank" rel="noopener noreferrer">
+				<Outbound href="DD Discord Link" target="_blank" rel="noopener noreferrer">
 					<Img src="/images/discord.PNG" />
 				</Outbound>
 				<Outbound href="https://opensea.io/collection/diamond-dawgs" target="_blank" rel="noopener noreferrer">
@@ -43,6 +43,10 @@ const Outbound = styled.a`
 	width: 100px;
 	justify-self: center;
 	align-self: center;
+
+	@media (max-width: 575px) {
+		width: 50px;
+	}
 `
 
 const Img = styled.img`

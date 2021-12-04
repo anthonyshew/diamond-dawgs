@@ -11,8 +11,7 @@ const colors = {
 	gray600: "#808080",
 	white: "#FFFFFF",
 	black: "#000000",
-	darkBlue: "#479DCF",
-	lightBlue: "#6BE7E5"
+	darkBlue: "#1D84C0"
 }
 
 const MyApp = ({ Component, pageProps }) => {
