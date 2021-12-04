@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Hamburger from "./Hamburger"
 import { useMobile } from "hooks/isMobile"
 
-const navLinks = [
+export const navLinks = [
 	{
 		text: "Collection Goals",
 		anchorLink: "goals"
