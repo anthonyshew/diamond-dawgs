@@ -36,4 +36,5 @@ const P = styled.p`
 	margin-top: 1.5rem;
 	font-weight: 600;
 	font-size: 1.125rem;
+	letter-spacing: 0.04rem;
 `

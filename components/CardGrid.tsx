@@ -36,7 +36,7 @@ const CardGrid = () => {
 				<P>$30,000 in ETH giveaway to 3 holders</P>
 			</Card>
 			<Card
-				image="/images/action_shot.PNG"
+				image="/images/grand_opening.PNG"
 				backgroundColor={theme.colors.orange}
 				textColor={theme.colors.black}
 				title="Long Term Goals"
@@ -69,6 +69,10 @@ const Grid = styled.div`
 		${(props) => props.theme.colors.white} 275px,
 		${(props) => props.theme.colors.white} 100%
 	);
+
+	@media (max-width: 1000px) {
+		display: block;
+	}
 `
 
 const H4 = styled.h4`

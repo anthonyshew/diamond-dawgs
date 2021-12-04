@@ -32,7 +32,7 @@ export default Hero
 
 const Section = styled.section`
 	background: ${(props) => props.theme.colors.darkGreen};
-	padding-top: 16rem;
+	padding-top: 3rem;
 	color: ${(props) => props.theme.colors.white};
 `
 
@@ -62,6 +62,10 @@ const Hr = styled.hr`
 const Paragraph = styled.p`
 	margin: 0 auto;
 	max-width: 32rem;
+	font-weight: 600;
+	font-size: 1.25rem;
+	letter-spacing: 0.1rem;
+	line-height: 2rem;
 `
 
 const NumbersContainer = styled.div`
@@ -99,6 +103,8 @@ const ConnectWallet = styled.button`
 	color: ${(props) => props.theme.colors.white};
 	letter-spacing: 0.2rem;
 	font-weight: 600;
+	cursor: pointer;
+	margin-top: 2rem;
 `
 
 const LargeNumber = styled.p`

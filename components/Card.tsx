@@ -23,6 +23,7 @@ export default Card
 
 const Container = styled.div`
 	width: 300px;
+	margin: 3rem auto;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -30,6 +31,10 @@ const Container = styled.div`
 	border-radius: 24px;
 	overflow: hidden;
 	box-shadow: 10px 25px 25px 1px black;
+
+	@media (max-width: 1000px) {
+		width: 80%;
+	}
 `
 
 const Img = styled.div<{ src: string }>`
@@ -38,6 +43,10 @@ const Img = styled.div<{ src: string }>`
 	background-image: url(${(props) => props.src});
 	background-position: center;
 	background-size: cover;
+
+	@media (max-width: 1000px) {
+		height: 50vw;
+	}
 `
 const Body = styled.div<{ backgroundColor: string }>`
 	flex: 1;

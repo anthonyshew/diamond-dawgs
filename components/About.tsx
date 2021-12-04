@@ -44,12 +44,13 @@ const H2 = styled.h2`
 const ContentContainer = styled.div`
 	padding: 3rem;
 	background-color: ${(props) => props.theme.colors.lightGreen};
-	font-size: 24px;
 	letter-spacing: 0.05rem;
 
 	p {
 		margin: 0 auto;
 		max-width: 750px;
 		font-weight: 600;
+		line-height: 2.5rem;
+		font-size: 1.5rem;
 	}
 `
