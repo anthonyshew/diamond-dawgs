@@ -132,6 +132,7 @@ const Price = styled.div`
 `
 
 const ConnectWallet = styled.button`
+	appearance: none;
 	background-color: ${(props) => props.theme.colors.darkBlue};
 	border-radius: 9999px;
 	padding: 0.5rem 3rem;

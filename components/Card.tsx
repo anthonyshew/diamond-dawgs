@@ -11,7 +11,7 @@ const Card: React.FC<Props> = ({ image, title, backgroundColor, textColor, child
 	return (
 		<Container>
 			<Img src={image} />
-			<Body backgroundColor={backgroundColor}>
+			<Body backgroundColor={backgroundColor} textColor={textColor}>
 				<Title>{title}</Title>
 				{children}
 			</Body>
@@ -48,7 +48,7 @@ const Img = styled.div<{ src: string }>`
 		height: 50vw;
 	}
 `
-const Body = styled.div<{ backgroundColor: string }>`
+const Body = styled.div<{ backgroundColor: string; textColor: string }>`
 	flex: 1;
 	display: flex;
 	flex-direction: column;
@@ -57,6 +57,7 @@ const Body = styled.div<{ backgroundColor: string }>`
 	width: 100%;
 	padding: 1rem;
 	background-color: ${(props) => props.backgroundColor};
+	color: ${(props) => props.textColor};
 	font-weight: 700;
 	border-radius: 0 0 24px 24px;
 `
