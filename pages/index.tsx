@@ -4,6 +4,7 @@ import FullHeightDawg from "@Components/FullHeightDawg"
 import AnotherHero from "@Components/AnotherHero"
 import CardGrid from "@Components/CardGrid"
 import About from "@Components/About"
+import CoachingStaff from "@Components/CoachingStaff"
 
 const Home = () => {
 	return (
@@ -14,6 +15,7 @@ const Home = () => {
 			<AnotherHero />
 			<CardGrid />
 			<About />
+			<CoachingStaff />
 		</main>
 	)
 }

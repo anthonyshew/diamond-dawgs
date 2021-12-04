@@ -45,7 +45,7 @@ const ContentContainer = styled.div`
 	padding: 3rem;
 	background-color: ${(props) => props.theme.colors.lightGreen};
 	font-size: 24px;
-	letter-spacing: 0.1rem;
+	letter-spacing: 0.05rem;
 
 	p {
 		margin: 0 auto;
