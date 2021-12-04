@@ -1,19 +1,11 @@
 import styled from "styled-components"
-import { useEffect, useState } from "react"
-
 import Link from "next/link"
-import { useMobile } from "hooks/isMobile"
+import SEO from "@Components/SEO"
 
 const VipRedeem = () => {
-	const [isMenuOpen, setIsMenuOpen] = useState(false)
-	const isMobile = useMobile()
-
-	useEffect(() => {
-		setIsMenuOpen(false)
-	}, [setIsMenuOpen])
-
 	return (
 		<Main>
+			<SEO title="VIP Redemptions | Diamond Dawgs NFT" description="VIP Redemptions | Coming Soon" />
 			<H1>VIP Redemptions</H1>
 			<ComingSoon>Coming Soon</ComingSoon>
 			<Link href="/">

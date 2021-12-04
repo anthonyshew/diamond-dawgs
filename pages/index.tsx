@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 
 import { useMobile } from "hooks/isMobile"
+import SEO from "@Components/SEO"
 import Navbar from "@Components/Navbar"
 import MobileMenu from "@Components/MobileMenu"
 import Hero from "@Components/Hero"
@@ -23,6 +24,7 @@ const Home = () => {
 
 	return (
 		<main>
+			<SEO title="Diamond Dawgs NFT" description="Welcome to Diamond Dawgs." />
 			<Navbar setIsMenuOpen={setIsMenuOpen} />
 			<MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 			<Hero />
